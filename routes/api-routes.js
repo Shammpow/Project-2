@@ -7,10 +7,15 @@ module.exports = function (app) {
 
     // GET route for getting all of the posts
     app.get("/api/drinks/", function (req, res) {
-        db.Drinks.findAll({})
-            .then(function (dbdrinks) {
-                res.json(dbdrinks);
+        db.drinks.findAll({})
+            .then(function (data) {
+                var hbsObject = {
+                    drinks: data
+                }
+                console.log("HBSObject: " + JSON.stringify(hbsObject));
+                res.render("index", hbsObject);
             });
+
     });
 
     // Get route for returning drinkss of a specific category
