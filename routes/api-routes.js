@@ -13,7 +13,7 @@ module.exports = function (app) {
                     drinks: data
                 }
                 console.log("HBSObject: " + JSON.stringify(hbsObject));
-                res.render("index", hbsObject);
+                res.render("index", hbsObject.drinks);
             });
 
     });
