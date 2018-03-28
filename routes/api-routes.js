@@ -5,6 +5,29 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
+    app.get("/drinks/", function (req, res) {
+        db.drinks.findAll({})
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    drinks: data
+                }
+                res.render("drinks", hbsObject);
+            });
+
+    });
+    app.get("/food/", function (req, res) {
+        db.foods.findAll({})
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    foods: data
+                }
+                res.render("foods", hbsObject);
+            });
+
+    });
+
     // GET route for getting all of the posts
     app.get("/api/drinks/", function (req, res) {
         db.drinks.findAll({})
@@ -13,7 +36,18 @@ module.exports = function (app) {
                 var hbsObject = {
                     drinks: data
                 }
-                res.render("drinks", hbsObject);
+                res.json(hbsObject);
+            });
+
+    });
+    app.get("/api/foods/", function (req, res) {
+        db.foods.findAll({})
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    foods: data
+                }
+                res.json(hbsObject);
             });
 
     });
