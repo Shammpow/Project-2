@@ -9,11 +9,11 @@ module.exports = function (app) {
     app.get("/api/drinks/", function (req, res) {
         db.drinks.findAll({})
             .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
                 var hbsObject = {
                     drinks: data
                 }
-                console.log("HBSObject: " + JSON.stringify(hbsObject));
-                res.render("index", hbsObject);
+                res.render("index", hbsObject)
             });
 
     });
