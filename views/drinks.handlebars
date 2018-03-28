@@ -1,0 +1,13 @@
+<div class="allDrinks">
+  <h1>DRINKS</h1>
+  {{#each drinks}}
+  <div class="drinkContainer">
+    <h1>{{this.name}}</h1>
+    <h2>{{this.source}}</h2>
+    {{this.ingredients}}
+    <br>
+    <br>{{this.recipe}}
+    <br>
+    <br> {{this.blurb}}
+    <br> </div>{{/each }}
+</div>
