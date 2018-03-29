@@ -41,3 +41,183 @@ img {
 .content {
     padding: 10px;
 }
+a {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: red;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans Caption', sans-serif;
+    min-width: 380px;
+}
+
+div.banner {
+    border: solid 1px #000000;
+    max-width: 782px; 
+    min-width: 352px;
+    min-height: 150px; 
+    margin: 0 auto; 
+}
+
+div.break {
+    width: 90%; 
+    height: 2px;
+    margin: 0 auto;  
+    background-color: #000000;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.chain {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: solid 1px black; 
+    width: 100%;
+}
+
+div.gutter {
+    height: 5vh;
+}
+
+div.links {
+    max-width: 800px; 
+    min-width: 380px;
+    background-color: #000000;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+div.main {
+    max-width: 800px; 
+    min-width: 380px;
+    margin: 0 auto; 
+}
+
+div.post {
+    border: solid 1px #000000;
+    width: 90%;
+    margin: 0 auto; 
+}
+
+div.search {
+    max-width: 782px; 
+    min-width: 352px;
+    margin: 0 auto; 
+}
+
+div.social {
+    max-width: 800px; 
+    min-width: 380px;
+    margin: 0 auto; 
+    margin-bottom: 95px;
+}
+
+div.subtitle {
+    border: solid 1px #000000;
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 782px; 
+    min-width: 352px;
+    margin: 0 auto; 
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+
+div.text {
+    padding: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    overflow-y: hidden;
+    text-align: center;
+    width: 100%;
+    min-width: 380px;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+h1.subtitle {
+    margin: 0;
+    padding: 3px;
+}
+
+h3.text {
+    width: 100%; 
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+h5.text {
+    width: 100%; 
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+header {
+    padding: 0px;
+}
+
+img.clickable {
+    height: 50px;
+    width: 50px;
+    float: right;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+select {
+    background-color: #9ecff0;
+    color:#000000;
+    font-weight: bold; 
+    padding: 5px; 
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    height: 100%; 
+}
+
+span.links {
+    display: inline-block;
+    padding: 10px;
+}
+
+span.post {
+    padding: 5px; 
+}
+
