@@ -46,6 +46,14 @@ div.center {
     text-align: center;
 }
 
+div.chain {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: solid 1px black; 
+    width: 100%;
+}
+
 div.gutter {
     height: 5vh;
 }
@@ -68,6 +76,12 @@ div.main {
 div.post {
     border: solid 1px #000000;
     width: 90%;
+    margin: 0 auto; 
+}
+
+div.search {
+    max-width: 782px; 
+    min-width: 352px;
     margin: 0 auto; 
 }
 
@@ -142,6 +156,17 @@ img.clickable {
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+select {
+    background-color: #9ecff0;
+    color:#000000;
+    font-weight: bold; 
+    padding: 5px; 
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    height: 100%; 
 }
 
 span.links {
