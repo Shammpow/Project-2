@@ -3,6 +3,11 @@
     color: white;
     border: 2px solid white;
 }
+a {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
 
 .flavortext {
     font-style: italic;
@@ -19,6 +24,7 @@
     padding-left: 20px;
     padding-bottom: 10px
 }
+<<<<<<< HEAD
 
 img {
     float: left;
@@ -48,6 +54,8 @@ a {
     text-transform: uppercase;
 }
 
+=======
+>>>>>>> origin/loyola-branch
 a:link {
     color: pink;
 }
@@ -262,6 +270,7 @@ span.post {
     padding: 5px; 
 }
 
+<<<<<<< HEAD
 .foodImg {
     max-width: 300px;
     max-height: 300px
@@ -275,3 +284,5 @@ span.post {
     padding-bottom: 5px;
     border-bottom: 1px solid black;
 }
+=======
+>>>>>>> origin/loyola-branch

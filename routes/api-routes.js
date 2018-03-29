@@ -5,6 +5,18 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
+    app.get("/", function (req, res) {
+        res.render("index");
+    });
+
+    app.get("/add-drinks/", function (req, res) {
+        res.render("addDrink");
+    });
+
+    app.get("/add-food/", function (req, res) {
+        res.render("addFood");
+    });
+
     app.get("/drinks/", function (req, res) {
         db.drinks.findAll({})
             .then(function (data) {
@@ -16,6 +28,22 @@ module.exports = function (app) {
                 var hbsObject = {
                     drinks: drinks,
 
+                }
+                res.render("drinks", hbsObject);
+            });
+
+    });
+
+    app.get("/drinks/source/:source", function (req, res) {
+        db.drinks.findAll({
+            where: {
+                source: req.params.source
+            }
+        })
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    drinks: data
                 }
                 res.render("drinks", hbsObject);
             });
@@ -71,8 +99,26 @@ module.exports = function (app) {
 
                 }
                 res.render("foods", hbsObject);
+<<<<<<< HEAD
 
             })
+=======
+            });
+    });
+    app.get("/food/source/:source", function (req, res) {
+        db.foods.findAll({
+            where: {
+                source: req.params.source
+            }
+        })
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    foods: data
+                }
+                res.render("foods", hbsObject);
+            });
+>>>>>>> origin/loyola-branch
     });
 
     app.get("/api/foods/", function (req, res) {
@@ -117,7 +163,8 @@ module.exports = function (app) {
             source: req.body.source,
             ingredients: req.body.ingredients,
             recipe: req.body.recipe,
-            blurb: req.body.blurb
+            blurb: req.body.blurb,
+            imageURL: req.body.imageURL
         })
             .then(function (dbPost) {
                 res.json(dbPost);
@@ -130,7 +177,8 @@ module.exports = function (app) {
             source: req.body.source,
             ingredients: req.body.ingredients,
             recipe: req.body.recipe,
-            blurb: req.body.blurb
+            blurb: req.body.blurb,
+            imageURL: req.body.imageURL
         })
             .then(function (dbPost) {
                 res.json(dbPost);
