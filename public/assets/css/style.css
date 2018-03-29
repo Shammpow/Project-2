@@ -248,3 +248,12 @@ span.post {
     padding: 5px; 
 }
 
+.foodImg {
+    max-width: 300px;
+    max-height: 300px
+}
+
+.drinkImg {
+    max-width: 300px;
+    max-height: 300px
+}

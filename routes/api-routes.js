@@ -61,13 +61,18 @@ module.exports = function (app) {
     app.get("/food/", function (req, res) {
         db.foods.findAll({})
             .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
+                var food = data;
+                for (i = 0; i < food.length; i++) {
+                    var foodIngredients = food[i].ingredients.split(",");
+                    food[i].ingredients = foodIngredients;
+                }
                 var hbsObject = {
-                    foods: data
+                    food: food,
+
                 }
                 res.render("foods", hbsObject);
-            });
 
+            })
     });
 
     app.get("/api/foods/", function (req, res) {
