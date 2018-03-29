@@ -1,30 +1,40 @@
-$(document).ready(function () {
-    $.get("/api/drinks", function (data, status) {
+$("#addDrink").on("click", function (event) {
+    event.preventDefault();
+    var newDrink = {
+        name: $("#recipename").val().trim(),
+        source: $("#source").val().trim(),
+        ingredients: $("#ingredients").val().trim(),
+        recipe: $("#recipe").val().trim(),
+        blurb: $("#blurb").val().trim(),
+        imageURL: $("#imageURL").val().trim(),
+      };
 
-    }).then((data) => {
-        for (i = 0; i < data.drinks; i++) {
-
-            var ingText = $("$hideMe"[i]).val().split(',');
+    $.ajax("/api/drinks", {
+        type: "POST",
+        data: newDrink
+      }).then(
+        function() {
+          console.log("Pushed a drink");
         }
-        //     console.log(data);
-        //     for (i = 0; i < data.drinks; i++) {
-        //         var ingArray = [];
-        //         var blah = drinks[i].ingredients.val().split(',');
-        //         ingArray.push(blah);
-        //         console.log(ingArray);
-        //         for (j = 0; j < ingArray.length; j++) {
-        //             var span = $("<span>");
-        //             $(span).html("<li>" + ingArray[j])
-        //             $(".ingredients").append(span);
-        //         }
-        //     }
-    })
-   
-
-    // $(".hideMe").hide();
-    // for (i = 0; i < ingArray.length; i++) {
-    //     var span = $("<span>");
-    //     $(span).html("<li>" + ingArray[i])
-    //     $(".ingredients").append(span);
-    // }
+      );
 });
+$("#addFood").on("click", function (event) {
+    event.preventDefault();
+    var newfood = {
+        name: $("#recipename").val().trim(),
+        source: $("#source").val().trim(),
+        ingredients: $("#ingredients").val().trim(),
+        recipe: $("#recipe").val().trim(),
+        blurb: $("#blurb").val().trim(),
+        imageURL: $("#imageURL").val().trim(),
+      };
+
+    $.ajax("/api/foods", {
+        type: "POST",
+        data: newfood
+      }).then(
+        function() {
+          console.log("Pushed a drink");
+        }
+      );
+})

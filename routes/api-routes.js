@@ -6,15 +6,15 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/", function (req, res) {
-        db.drinks.findAll({})
-            .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
-                var hbsObject = {
-                    drinks: data
-                }
-                res.render("index", hbsObject);
-            });
+        res.render("index");
+    });
 
+    app.get("/add-drinks/", function (req, res) {
+        res.render("addDrink");
+    });
+
+    app.get("/add-food/", function (req, res) {
+        res.render("addFood");
     });
 
     app.get("/drinks/", function (req, res) {
@@ -31,7 +31,7 @@ module.exports = function (app) {
 
     app.get("/drinks/source/:source", function (req, res) {
         db.drinks.findAll({
-            where:{
+            where: {
                 source: req.params.source
             }
         })
@@ -149,7 +149,8 @@ module.exports = function (app) {
             source: req.body.source,
             ingredients: req.body.ingredients,
             recipe: req.body.recipe,
-            blurb: req.body.blurb
+            blurb: req.body.blurb,
+            imageURL: req.body.imageURL
         })
             .then(function (dbPost) {
                 res.json(dbPost);
@@ -162,7 +163,8 @@ module.exports = function (app) {
             source: req.body.source,
             ingredients: req.body.ingredients,
             recipe: req.body.recipe,
-            blurb: req.body.blurb
+            blurb: req.body.blurb,
+            imageURL: req.body.imageURL
         })
             .then(function (dbPost) {
                 res.json(dbPost);
