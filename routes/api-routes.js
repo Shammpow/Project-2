@@ -101,20 +101,72 @@ module.exports = function (app) {
                 res.render("foods", hbsObject);
             });
     });
+
     app.get("/food/source/:source", function (req, res) {
-        db.foods.findAll({
-            where: {
-                source: req.params.source
-            }
-        })
+        db.foods.findAll({ where: { source: req.params.source } })
             .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
+                var food = data;
+                for (i = 0; i < food.length; i++) {
+                    var foodIngredients = food[i].ingredients.split(",");
+                    food[i].ingredients = foodIngredients;
+                }
                 var hbsObject = {
-                    foods: data
+                    food: food,
+
                 }
                 res.render("foods", hbsObject);
             });
     });
+
+    app.get("/food/name/:name", function (req, res) {
+        db.foods.findAll({ where: { name: req.params.name } })
+            .then(function (data) {
+                var food = data;
+                for (i = 0; i < food.length; i++) {
+                    var foodIngredients = food[i].ingredients.split(",");
+                    food[i].ingredients = foodIngredients;
+                }
+                var hbsObject = {
+                    food: food,
+
+                }
+                res.render("foods", hbsObject);
+            });
+    });
+
+    app.get("/drinks/source/:source", function (req, res) {
+        db.drinks.findAll({ where: { source: req.params.source } })
+            .then(function (data) {
+                var drinks = data;
+                for (i = 0; i < drinks.length; i++) {
+                    var drinksIngredients = drinks[i].ingredients.split(",");
+                    drinks[i].ingredients = drinksIngredients;
+                }
+                var hbsObject = {
+                    drinks: drinks,
+
+                }
+                res.render("drinks", hbsObject);
+            });
+    });
+
+    app.get("/drinks/name/:name", function (req, res) {
+        db.drinks.findAll({ where: { name: req.params.name } })
+            .then(function (data) {
+                var drinks = data;
+                for (i = 0; i < drinks.length; i++) {
+                    var drinksIngredients = drinks[i].ingredients.split(",");
+                    drinks[i].ingredients = drinksIngredients;
+                }
+                var hbsObject = {
+                    drinks: drinks,
+
+                }
+                res.render("drinks", hbsObject);
+            });
+    });
+
+
 
     app.get("/api/foods/", function (req, res) {
         db.foods.findAll({})
@@ -128,27 +180,6 @@ module.exports = function (app) {
 
     });
 
-    app.get("/api/foods/source/:source", function (req, res) {
-        db.foods.findAll({
-            where: {
-                source: req.params.source
-            }
-        })
-            .then(function (dbfoods) {
-                res.json(dbfoods);
-            });
-    });
-
-    app.get("/api/foods/id/:id", function (req, res) {
-        db.foods.findOne({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function (dbfood) {
-                res.json(dbfood);
-            });
-    });
 
     // POST route for saving a new drink
     app.post("/api/drinks", function (req, res) {
@@ -178,6 +209,17 @@ module.exports = function (app) {
             .then(function (dbPost) {
                 res.json(dbPost);
             });
+    });
+
+    app.post('/api/search/food', function (req, res) {
+        var infoRequest = req.body;
+        console.log(infoRequest)
+        db.foods.findAll({
+
+            where: infoRequest
+        }).then(function (data) {
+            res.redirect("/drinks", data);
+        });
     });
 
     // DELETE route for deleting posts
