@@ -237,6 +237,13 @@ input {
     width: 85%;
 }
 
+input.pop {
+    width: 100%;
+    margin: 0; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 select {
     background-color: #9ecff0;
     color:#000000;
