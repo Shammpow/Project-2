@@ -271,3 +271,7 @@ span.post {
     max-width: 300px;
     max-height: 300px
 }
+.title.is-5 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}

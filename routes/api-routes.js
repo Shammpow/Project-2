@@ -138,49 +138,49 @@ module.exports = function (app) {
     });
 
     // DELETE route for deleting posts
-    app.delete("/api/drinks/:id", function (req, res) {
-        db.drinks.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function (dbPost) {
-                res.json(dbPost);
-            });
-    });
+    // app.delete("/api/drinks/:id", function (req, res) {
+    //     db.drinks.destroy({
+    //         where: {
+    //             id: req.params.id
+    //         }
+    //     })
+    //         .then(function (dbPost) {
+    //             res.json(dbPost);
+    //         });
+    // });
 
-    app.delete("/api/foods/:id", function (req, res) {
-        db.foods.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function (dbPost) {
-                res.json(dbPost);
-            });
-    });
+    // app.delete("/api/foods/:id", function (req, res) {
+    //     db.foods.destroy({
+    //         where: {
+    //             id: req.params.id
+    //         }
+    //     })
+    //         .then(function (dbPost) {
+    //             res.json(dbPost);
+    //         });
+    // });
 
-    // PUT route for updating posts
-    app.put("/api/drinks", function (req, res) {
-        db.drinks.update(req.body,
-            {
-                where: {
-                    id: req.body.id
-                }
-            })
-            .then(function (dbdrink) {
-                res.json(dbdrink);
-            });
-    });
-    app.put("/api/foods", function (req, res) {
-        db.foods.update(req.body,
-            {
-                where: {
-                    id: req.body.id
-                }
-            })
-            .then(function (dbfood) {
-                res.json(dbfood);
-            });
-    });
+    // // PUT route for updating posts
+    // app.put("/api/drinks", function (req, res) {
+    //     db.drinks.update(req.body,
+    //         {
+    //             where: {
+    //                 id: req.body.id
+    //             }
+    //         })
+    //         .then(function (dbdrink) {
+    //             res.json(dbdrink);
+    //         });
+    // });
+    // app.put("/api/foods", function (req, res) {
+    //     db.foods.update(req.body,
+    //         {
+    //             where: {
+    //                 id: req.body.id
+    //             }
+    //         })
+    //         .then(function (dbfood) {
+    //             res.json(dbfood);
+    //         });
+    // });
 };

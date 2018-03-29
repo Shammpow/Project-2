@@ -18,12 +18,16 @@
       </div>
     </div>
     <div class="content">
+      <p class="title is-5">Ingredients</p>
+
       <ol id="list-{{this.id}}">
         {{#each ingredients}}
         <li>{{this}}</li>
         {{/each}}
       </ol>
-      <br> {{this.recipe}}
+      <p class="title is-5">Instructions</p>
+
+      <div>{{this.recipe}}</div>
     </div>
 
     <div class="card-footer">
