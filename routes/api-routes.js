@@ -99,10 +99,6 @@ module.exports = function (app) {
 
                 }
                 res.render("foods", hbsObject);
-<<<<<<< HEAD
-
-            })
-=======
             });
     });
     app.get("/food/source/:source", function (req, res) {
@@ -118,7 +114,6 @@ module.exports = function (app) {
                 }
                 res.render("foods", hbsObject);
             });
->>>>>>> origin/loyola-branch
     });
 
     app.get("/api/foods/", function (req, res) {
