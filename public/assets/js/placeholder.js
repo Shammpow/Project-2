@@ -1,4 +1,4 @@
-$("#addDrink").on("click", function (event) {
+$(document).on("click", "#addDrink", function () {
     event.preventDefault();
     var newDrink = {
         name: $("#recipename").val().trim(),

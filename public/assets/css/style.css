@@ -126,6 +126,12 @@ div.main {
     margin: 0 auto; 
 }
 
+div.ping {
+    max-width: 782px; 
+    min-width: 352px;
+    min-height: 150px; 
+}
+
 div.post {
     border: solid 1px #000000;
     width: 90%;
