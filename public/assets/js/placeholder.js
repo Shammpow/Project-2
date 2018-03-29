@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var ingredients = $(".hideMe").text().split(",");
+    var ingredients = $("#ingredients-").text().split(",");
     $(".hideMe").hide();
     console.log(ingredients)
     for (i = 0; i < ingredients.length; i++) {
