@@ -1,10 +1,18 @@
 <div class="allDrinks">
-  <h1>DRINKS</h1>
+  <p class="title is-2">DRINKS</p>
   {{#each drinks}}
-    <div class="card">
-      <div class="card-header">
-        <h1>{{this.name}}</h1>
+  <div class="card">
+    <div class="card-header">
+      <p class="title is-3">{{this.name}}</p>
+    </div>
+    <div id="this">{{drinks}}</div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+        </div>
       </div>
+      <div class="media-content">
+        <img class="drinkImg" src="{{this.imageURL}}" alt="Placeholder Image">
 
       <div class="card-content">
         <div class="media">
@@ -18,17 +26,20 @@
           <p class="title is-4">{{this.source}}</p>
         </div>
       </div>
-      <div class="content">
-        <ol class="ingredients" ></ol>
-          <div class="hideMe{{this.id}}">{{ this.ingredients }}</div>
-        <br> 
-        {{this.recipe}}
-      </div>
-
-      <div class="card-footer">    
-        {{this.blurb}}
-      </div> 
-
     </div>
+    <div class="content">
+      <ol id="list-{{this.id}}">
+        {{#each ingredients}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ol>
+      <br> {{this.recipe}}
+    </div>
+
+    <div class="card-footer">
+      {{this.blurb}}
+    </div>
+
+  </div>
   {{/each }}
 </div>
