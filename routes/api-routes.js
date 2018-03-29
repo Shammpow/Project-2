@@ -5,8 +5,36 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
+    app.get("/", function (req, res) {
+        db.drinks.findAll({})
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    drinks: data
+                }
+                res.render("index", hbsObject);
+            });
+
+    });
+
     app.get("/drinks/", function (req, res) {
         db.drinks.findAll({})
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    drinks: data
+                }
+                res.render("drinks", hbsObject);
+            });
+
+    });
+
+    app.get("/drinks/source/:source", function (req, res) {
+        db.drinks.findAll({
+            where:{
+                source: req.params.source
+            }
+        })
             .then(function (data) {
                 console.log(JSON.stringify(data, null, 2))
                 var hbsObject = {
@@ -63,7 +91,20 @@ module.exports = function (app) {
                 }
                 res.render("foods", hbsObject);
             });
-
+    });
+    app.get("/food/source/:source", function (req, res) {
+        db.foods.findAll({
+            where: {
+                source: req.params.source
+            }
+        })
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    foods: data
+                }
+                res.render("foods", hbsObject);
+            });
     });
 
     app.get("/api/foods/", function (req, res) {
