@@ -27,24 +27,24 @@
                 <div class="button">
 
                     <select class="type" name="type" form="typechoice">
-                        <option value="drink">Drink</option>
-                        <option value="food">Food</option>
+                        <option id="drink" value="drink">Drink</option>
+                        <option id="food" value="food">Food</option>
                     </select>
 
-                    <select name="source" form="sourcechoice">
+                    <select class="origin" name="source" form="sourcechoice">
                         <option value="recipe">Recipe</option>
                         <option value="source">Source</option>
                     </select>
 
                     <form>
-                        <input type="text" id="search" name="search" value="Type Your Search Here">
+                        <input type="text" id="search" name="search" placeholder="Type Your Search Here">
                     </form>
 
-                    <button class="go">Search</button>   
-                    
+                    <button class="go">Search</button>
+
                     <div class="break"></div>
 
-                    <button class="drink">Add a Drink Recipe</button>                     
+                    <button class="drink">Add a Drink Recipe</button>
                     <button class="food">Add a Food Recipe</button>
 
                 </div>
@@ -206,14 +206,9 @@
         </div>
 
     </footer>
-
-    <script src="assets/js/placeholder.js"></script>
-
-</body>
-
-</html>
-
-<script src="assets/js/placeholder.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/cactuar.js"></script>
 
 </body>
 
