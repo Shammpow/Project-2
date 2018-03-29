@@ -34,21 +34,7 @@ module.exports = function (app) {
 
     });
 
-    app.get("/drinks/source/:source", function (req, res) {
-        db.drinks.findAll({
-            where: {
-                source: req.params.source
-            }
-        })
-            .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
-                var hbsObject = {
-                    drinks: data
-                }
-                res.render("drinks", hbsObject);
-            });
-
-    });
+    
 
     // GET route for getting all of the posts
     app.get("/api/drinks/", function (req, res) {
@@ -146,6 +132,7 @@ module.exports = function (app) {
                     drinks: drinks,
 
                 }
+                console.log(hbsObject)
                 res.render("drinks", hbsObject);
             });
     });
