@@ -53,20 +53,9 @@ a {
     text-transform: uppercase;
 }
 
-a:link {
-    color: pink;
-}
-
-a:visited {
-    color: pink;
-}
-
-a:hover {
-    color: red;
-}
-
-a:active {
-    color: red;
+a.none {
+    color: black; 
+    text-decoration: none;
 }
 
 body {
@@ -81,6 +70,7 @@ button {
     font-weight: bold; 
     padding: 5px; 
     font-size: 16px;
+    color: black;
 }
 
 div.banner {
@@ -285,3 +275,4 @@ span.post {
     padding: 0; 
     margin: 0;
 }
+
