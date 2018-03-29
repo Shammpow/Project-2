@@ -41,6 +41,7 @@ img {
 .content {
     padding: 10px;
 }
+
 a {
     font-weight: bolder;
     text-decoration: underline;
@@ -83,6 +84,9 @@ div.banner {
     min-width: 352px;
     min-height: 150px; 
     margin: 0 auto; 
+    background: url("../images/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 div.break {
@@ -93,7 +97,7 @@ div.break {
     background-color: #000000;
 }
 
-div.button {
+div.button-jon {
     text-align: center;
     margin: 0 auto;
 }
@@ -146,7 +150,7 @@ div.social {
     margin-bottom: 95px;
 }
 
-div.subtitle {
+div.subtitle-jon {
     border: solid 1px #000000;
     background-color: #000000;
     color: #ffffff;
@@ -177,9 +181,19 @@ footer {
 
 h1, h2, h3, h4, h5 {
     text-align: center;
+    font-weight: bolder;
+    font-family: 'PT Sans Caption', sans-serif;
 }
 
-h1.subtitle {
+h1 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h1.subtitle-jon {
     margin: 0;
     padding: 3px;
 }
