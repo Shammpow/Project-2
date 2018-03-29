@@ -3,6 +3,11 @@
     color: white;
     border: 2px solid white;
 }
+a {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
 
 .flavortext {
     font-style: italic;

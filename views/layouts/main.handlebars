@@ -9,11 +9,40 @@
 </head>
 
 <body>
-	<section class="section">
-		{{{ body }}}
-	</section>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="/assets/js/cactuar.js"></script>
+
+	<header>
+
+		<div class="banner">
+			<img src="/assets/images/banner.png" role="banner">
+		</div>
+		<div class="subtitle">
+			<h1 class="subtitle">The Intoxicated Cactuar</h1>
+		</div>
+
+		<div class="search">
+
+			<div class="chain">
+
+				<select class="type" name="type" form="typechoice">
+					<option value="drink">Drink</option>
+					<option value="food">Food</option>
+				</select>
+
+				<select name="source" form="sourcechoice">
+					<option value="recipe">Recipe Name</option>
+					<option value="source">Source</option>
+				</select>
+
+			</div>
+
+		</div>
+
+	</header>
+	{{{ body }}}
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	 <script src="/assets/js/cactuar.js"></script>
 </body>
 
 </html>
