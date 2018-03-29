@@ -27,6 +27,13 @@ body {
     min-width: 380px;
 }
 
+button {
+    margin: 5px;
+    font-weight: bold; 
+    padding: 5px; 
+    font-size: 16px;
+}
+
 div.banner {
     border: solid 1px #000000;
     max-width: 782px; 
@@ -39,7 +46,13 @@ div.break {
     width: 90%; 
     height: 2px;
     margin: 0 auto;  
+    margin: 10px;
     background-color: #000000;
+}
+
+div.button {
+    text-align: center;
+    margin: 0 auto;
 }
 
 div.center {
@@ -47,11 +60,9 @@ div.center {
 }
 
 div.chain {
-    display: inline-block;
     margin: 0 auto;
-    margin-bottom: 10px;
-    border: solid 1px black; 
-    width: 100%;
+    margin-bottom: 15px;
+    width: 90%;
 }
 
 div.gutter {
@@ -107,6 +118,10 @@ div.text {
     padding: 5px;
 }
 
+div.wrap {
+    display: inline-block;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -158,6 +173,18 @@ img.clickable {
     margin-top: 5px;
 }
 
+input {
+    background-color: #caebfe;
+    color:#000000;
+    font-weight: bold; 
+    padding: 5px; 
+    font-size: 16px;
+    border: 0;
+    margin: 5px; 
+    border: solid 1px black;
+    width: 85%;
+}
+
 select {
     background-color: #9ecff0;
     color:#000000;
@@ -165,8 +192,8 @@ select {
     padding: 5px; 
     font-size: 16px;
     border: 0;
-    margin: 0;
-    height: 100%; 
+    margin: 5px; 
+    border: solid 1px black;
 }
 
 span.links {
