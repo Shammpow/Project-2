@@ -18,8 +18,11 @@
       </div>
     </div>
     <div class="content">
-      <ol id="list-{{this.id}}"></ol>
-      <div id="ingredients-{{this.id}}">{{ this.ingredients }}</div>
+      <ol id="list-{{this.id}}">
+        {{#each ingredients}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ol>
       <br> {{this.recipe}}
     </div>
 

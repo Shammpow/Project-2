@@ -8,9 +8,14 @@ module.exports = function (app) {
     app.get("/drinks/", function (req, res) {
         db.drinks.findAll({})
             .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
+                var drinks = data;
+                for (i = 0; i < drinks.length; i++) {
+                    var drinkIngredients = drinks[i].ingredients.split(",\n");
+                    drinks[i].ingredients = drinkIngredients;
+                }
                 var hbsObject = {
-                    drinks: data
+                    drinks: drinks,
+
                 }
                 res.render("drinks", hbsObject);
             });
@@ -21,7 +26,6 @@ module.exports = function (app) {
     app.get("/api/drinks/", function (req, res) {
         db.drinks.findAll({})
             .then(function (data) {
-                console.log(JSON.stringify(data, null, 2))
                 var hbsObject = {
                     drinks: data
                 }
