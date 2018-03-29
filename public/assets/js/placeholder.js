@@ -34,7 +34,7 @@ $("#addFood").on("click", function (event) {
         data: newfood
       }).then(
         function() {
-          console.log("Pushed a drink");
+          console.log("Pushed a food");
         }
       );
 })
