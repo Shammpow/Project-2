@@ -1,0 +1,14 @@
+<div class="allFoods">
+  <h1>Food</h1>
+  {{#each foods}}
+  <div class="foodContainer">
+    <h1>{{this.name}}</h1>
+    <h2>{{this.source}}</h2>
+    <div class="ingredients">{{this.ingredients}}</div>
+    <br>
+    <br>{{this.recipe}}
+    <br>
+    <br>
+    <div class="flavortext">{{this.blurb}}</div>
+    <br> </div>{{/each }}
+</div>
