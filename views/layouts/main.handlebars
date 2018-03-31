@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>The Intoxicated Cactuar</title>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!--		<script src="/assets/js/cats.js"></script>-->
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<title>The Intoxicated Cactuar</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title>The Intoxicated Cactuar</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="banner">
+            <a href="/">
+                <div class="ping"></div>
+            </a>
+        </div>
+
+        <div class="subtitle-jon">
+            <h1 class="subtitle-jon">The Intoxicated Cactuar</h1>
+        </div>
+
+        <div class="search">
+
+            <div class="chain">
+
+                <div class="button-jon-top" id="top">
+
+                    <select name="type" form="typechoice" id="type">
+                        <option value="drink">Drink</option>
+                        <option value="food">Food</option>
+                    </select>
+
+                    <select class="origin" name="source" form="sourcechoice" id="origin">
+                        <option value="recipe">Recipe</option>
+                        <option value="source">Source</option>
+                    </select>
+
+                    <form>
+                        <input type="text" id="search" name="search" placeholder="Type Your Search Here">
+                    </form>
+
+                    <button class="go">
+                        <a class="none">Search</a>
+                    </button>
+
+                    <div class="break"></div>
+
+                    <span class="noDrink">
+                        <button class="drink">
+                            <a href="/add-drinks" class="none">Add a Drink Recipe</a>
+                        </button>
+                    </span>
+                    <span class="noFood">
+                        <button class="food">
+                            <a href="/add-food" class="none">Add a Food Recipe</a>
+                        </button>
+                    </span>
+
+                    <div class="break"></div>
+
+                    <span class="getDrink">
+                        <button class="alldrink">
+                            <a href="/drinks" class="none">All Drinks</a>
+                        </button>
+                    </span>
+                    <span class="getFood">
+                        <button class="allfood">
+                            <a href="/food" class="none">All Food</a>
+                        </button>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+	<div class="main">
+
+		<section class="section">
+			{{{ body }}}
+		</section>
+
+	</div>
+
+	<div class="gutter"></div>
+
+    <footer>
+
+        <div class="pad">
+
+            <span class="left">
+                <a href="/about" class="bottom">About Us</a>
+            </span>
+            <span class="left">
+                <a href="/credits" class="bottom">Credits</a>
+            </span>
+            <span class="left">
+                <a href="/health" class="bottom">Saftey</a>
+            </span>
+            <span class="right">
+                <a href="/terms" class="bottom">Terms of Use</a>
+            </span>
+
+        </div>
+
+    </footer>
+
+</body>
+
 </html>
