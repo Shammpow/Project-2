@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-$(document).on("click", "#addDrink", function () {
-=======
 $("#addDrink").on("click", function (event) {
->>>>>>> origin/dakota_edwards
     event.preventDefault();
     var newDrink = {
         name: $("#recipename").val().trim(),
@@ -38,11 +34,7 @@ $("#addFood").on("click", function (event) {
         data: newfood
       }).then(
         function() {
-<<<<<<< HEAD
           console.log("Pushed a food");
-=======
-          console.log("Pushed a drink");
->>>>>>> origin/dakota_edwards
         }
       );
 })

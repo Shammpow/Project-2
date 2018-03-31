@@ -14,6 +14,7 @@ a {
 }
 .card {
     margin-bottom: 20px;
+    border: solid 1px black;
 }
 
 .title.is-4 {    
@@ -33,10 +34,10 @@ img {
     margin-left: 50px;
     margin-right: 50px;
     padding-left: 200px;
-    padding-right: 200px
+    padding-right: 200px;
 }
 .card-footer {
-    padding: 10px
+    padding: 10px;
 }
 
 .card-header {
@@ -151,6 +152,14 @@ div.social {
     margin-bottom: 95px;
 }
 
+div.subtitle-card {
+    max-width: 800px; 
+    min-width: 380px;
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+}
+
 div.subtitle-jon {
     border: solid 1px #000000;
     background-color: #000000;
@@ -197,6 +206,8 @@ h3 {
 h1.subtitle-jon {
     margin: 0;
     padding: 3px;
+    text-align: center;
+    width: 100%;
 }
 
 h3.text {
@@ -272,12 +283,14 @@ span.post {
 
 .foodImg {
     max-width: 300px;
-    max-height: 300px
+    max-height: 300px;
+    border: solid 1px black;
 }
 
 .drinkImg {
     max-width: 300px;
-    max-height: 300px
+    max-height: 300px;
+    border: solid 1px black;
 }
 .title.is-5 {
     padding-bottom: 5px;

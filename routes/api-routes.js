@@ -118,8 +118,6 @@ module.exports = function (app) {
                 }
                 res.render("foods", hbsObject);
             });
-<<<<<<< HEAD
-=======
     });
 
     app.get("/drinks/source/:source", function (req, res) {
@@ -153,7 +151,6 @@ module.exports = function (app) {
                 }
                 res.render("drinks", hbsObject);
             });
->>>>>>> origin/dakota_edwards
     });
 
 
