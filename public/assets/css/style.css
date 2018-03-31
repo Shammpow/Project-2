@@ -65,7 +65,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     min-width: 380px;
     min-height: 100vh;
-
+    background-color: red;
 }
 
 button {
@@ -133,6 +133,10 @@ div.ping {
     max-width: 782px; 
     min-width: 352px;
     min-height: 150px; 
+}
+
+div.pad {
+    padding: 5px;
 }
 
 div.post {
@@ -259,6 +263,10 @@ input {
     width: 85%;
 }
 
+input.frame {
+    width: 95%;
+}
+
 input.pop {
     width: 100%;
     margin: 0; 
@@ -332,6 +340,11 @@ div.food {
     background: url("../images/food.png");
     background-position: center;
     background-repeat: no-repeat; 
+}
+
+div.frame {
+    border: solid 1px black;
+    background-color: white;
 }
 
 div.drink {
