@@ -65,6 +65,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     min-width: 380px;
     min-height: 100vh;
+
 }
 
 button {
@@ -189,7 +190,8 @@ footer {
     overflow-y: hidden;
     text-align: center;
     width: 100%;
-    min-width: 380px;
+    background-color: black;
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
