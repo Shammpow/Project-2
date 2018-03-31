@@ -77,6 +77,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     min-width: 380px;
     min-height: 100vh;
+    background: url("../images/tile.png");
     background-color: red;
 }
 
@@ -101,7 +102,7 @@ div.banner {
 
 div.break {
     width: 90%; 
-    height: 2px;
+    height: 5px;
     margin: 0 auto;  
     margin: 10px;
     background-color: #000000;
@@ -309,7 +310,6 @@ span.left {
 span.post {
     padding: 5px; 
 }
-
 
 .foodImg {
     max-width: 300px;
