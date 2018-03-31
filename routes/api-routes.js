@@ -50,6 +50,23 @@ module.exports = function (app) {
 
     });
 
+    app.get("/drinks/name/:name", function (req, res) {
+        db.drinks.findAll({
+            where: {
+                name: req.params.name
+            }
+        })
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    drinks: data
+                }
+                res.render("drinks", hbsObject);
+            });
+
+    });
+
+
     // GET route for getting all of the posts
     app.get("/api/drinks/", function (req, res) {
         db.drinks.findAll({})
@@ -86,6 +103,17 @@ module.exports = function (app) {
             });
     });
 
+    app.get("/api/drinks/name/:name", function (req, res) {
+        db.drinks.findOne({
+            where: {
+                name: req.params.name
+            }
+        })
+            .then(function (dbdrinks) {
+                res.json(dbdrinks);
+            });
+    });
+
     app.get("/food/", function (req, res) {
         db.foods.findAll({})
             .then(function (data) {
@@ -101,7 +129,7 @@ module.exports = function (app) {
                 res.render("foods", hbsObject);
             });
     });
-    app.get("/food/source/:source", function (req, res) {
+    app.get("/food/source/:source/", function (req, res) {
         db.foods.findAll({
             where: {
                 source: req.params.source
@@ -114,6 +142,22 @@ module.exports = function (app) {
                 }
                 res.render("foods", hbsObject);
             });
+    });
+
+    app.get("/food/name/:name/", function (req, res) {
+        db.foods.findAll({
+            where: {
+                name: req.params.name
+            }
+        })
+            .then(function (data) {
+                console.log(JSON.stringify(data, null, 2))
+                var hbsObject = {
+                    foods: data
+                }
+                res.render("foods", hbsObject);
+            });
+
     });
 
     app.get("/api/foods/", function (req, res) {
@@ -143,6 +187,16 @@ module.exports = function (app) {
         db.foods.findOne({
             where: {
                 id: req.params.id
+            }
+        })
+            .then(function (dbfood) {
+                res.json(dbfood);
+            });
+    });
+    app.get("/api/foods/name/:name", function (req, res) {
+        db.foods.findOne({
+            where: {
+                name: req.params.name
             }
         })
             .then(function (dbfood) {
