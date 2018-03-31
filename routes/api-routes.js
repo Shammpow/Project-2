@@ -9,6 +9,22 @@ module.exports = function (app) {
         res.render("index");
     });
 
+    app.get("/about", function (req, res) {
+        res.render("about");
+    });
+
+    app.get("/health", function (req, res) {
+        res.render("health");
+    });
+
+    app.get("/credits", function (req, res) {
+        res.render("credits");
+    });
+
+    app.get("/terms", function (req, res) {
+        res.render("terms");
+    });
+
     app.get("/add-drinks/", function (req, res) {
         res.render("addDrink");
     });
