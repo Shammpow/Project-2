@@ -53,6 +53,12 @@ a {
     text-decoration: underline;
 }
 
+a.bottom {
+    color: lightblue;
+    text-transform: none;
+    text-decoration: none;
+}
+
 a.top {
     color: blue;
     text-transform: none;
@@ -296,8 +302,16 @@ span.links {
     padding: 10px;
 }
 
+span.left {
+    margin-right: 10px;
+}
+
 span.post {
     padding: 5px; 
+}
+
+span.right {
+    margin-left: 10px;
 }
 
 .foodImg {
