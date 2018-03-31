@@ -78,7 +78,7 @@ body {
     min-width: 380px;
     min-height: 100vh;
     background: url("../images/tile.png");
-    background-color: red;
+    background-color: gray;
 }
 
 button {
@@ -108,9 +108,13 @@ div.break {
     background-color: #000000;
 }
 
-div.button-jon {
+div.button-jon-top {
     text-align: center;
     margin: 0 auto;
+    background: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: solid 1px black;
 }
 
 div.center {
