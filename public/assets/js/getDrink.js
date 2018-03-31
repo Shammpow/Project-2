@@ -1,0 +1,1 @@
+$(".getDrink").html("");

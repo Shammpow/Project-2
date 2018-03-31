@@ -1,4 +1,4 @@
-$(".addDrink").on("click", function (event) {
+$("#addDrink").on("click", function (event) {
     event.preventDefault();
     var newDrink = {
         name: $("#recipename").val().trim(),
@@ -31,10 +31,9 @@ $(".addFood").on("click", function (event) {
     $.ajax("/api/foods", {
         type: "POST",
         data: newfood
-    }).then(
-        function () {
-            location.reload();
+      }).then(
+        function() {
+          console.log("Pushed a food");
         }
-    );
-
+      );
 })
