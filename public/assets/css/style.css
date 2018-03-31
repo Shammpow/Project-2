@@ -64,6 +64,7 @@ body {
     padding: 0;
     font-family: 'PT Sans Caption', sans-serif;
     min-width: 380px;
+    min-height: 100vh;
 }
 
 button {
@@ -173,6 +174,7 @@ div.subtitle-jon {
 
 div.text {
     padding: 5px;
+    background-color: white;
 }
 
 div.wrap {
