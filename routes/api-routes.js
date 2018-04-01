@@ -38,7 +38,7 @@ module.exports = function (app) {
             .then(function (data) {
                 var drinks = data;
                 for (i = 0; i < drinks.length; i++) {
-                    var drinkIngredients = drinks[i].ingredients.split(",\n");
+                    var drinkIngredients = drinks[i].ingredients.split(",");
                     drinks[i].ingredients = drinkIngredients;
                 }
                 var hbsObject = {
