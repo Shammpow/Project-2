@@ -53,15 +53,10 @@ a {
     text-decoration: underline;
 }
 
-<<<<<<< HEAD
-a:link {
-    color: pink;
-=======
 a.bottom {
     color: lightblue;
     text-transform: none;
     text-decoration: none;
->>>>>>> origin/jon-gilbert
 }
 
 a.top {
@@ -324,9 +319,6 @@ span.post {
 
 .drinkImg {
     max-width: 300px;
-<<<<<<< HEAD
-    max-height: 300px
-=======
     max-height: 300px;
     border: solid 1px black;
 }
@@ -381,5 +373,4 @@ div.drink {
     background: url("../images/drink.png");
     background-position: center;
     background-repeat: no-repeat; 
->>>>>>> origin/jon-gilbert
 }

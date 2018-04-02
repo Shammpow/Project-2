@@ -18,7 +18,7 @@ $("#addDrink").on("click", function (event) {
         }
     );
 });
-$(".addFood").on("click", function (event) {
+$("#addFood").on("click", function (event) {
     event.preventDefault();
     var newfood = {
         name: $("#recipename").val().trim(),
