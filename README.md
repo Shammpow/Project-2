@@ -2,7 +2,7 @@
 
 # About
 
-Our project is a website named 'The Intoxicated Cactuar', which has a database of food and drink recipes based off of popular games, tv shows, etc.. It also allows users to add their own entries to display on the website. 
+Our project is a website named 'The Intoxicated Cactuar', which has a database of food and drink recipes based off of popular games, tv shows, etc. It also allows users to add their own entries to display on the website. 
 
 The website separates recipes by food and drink, and separates results by recipe name and source, based on the user's selection.
 The user is able to add their entries by using either the Add a Drink Recipe button for a drink, or Add a Food Recipe for food.
