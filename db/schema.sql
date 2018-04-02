@@ -1,4 +1,3 @@
--- Creates the "drinks" database --
 CREATE DATABASE drinksDB;
 USE drinksDB;
 
