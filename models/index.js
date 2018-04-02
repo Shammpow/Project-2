@@ -6,9 +6,8 @@ var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.js')[env];
-console.log(config)
 var db        = {};
-
+var mysql = require("mysql");
 if (process.env.JAWSDB_URL) {
   var sequelize = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

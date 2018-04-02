@@ -3,7 +3,7 @@ var Nightmare = require("nightmare");
 var nightmare = Nightmare({ show: true });
 
 var page = nightmare
-  .goto("https://the-intoxicated-cactuar.herokuapp.com")
+  .goto("localhost:3000")
   .type("#search", "Tonberry")
   .click("#searchButton")
   .wait("#links a")
